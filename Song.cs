@@ -6,5 +6,6 @@ namespace DACNPM_MediaPlayer
 {
     class Song
     {
+        public string Name { get; set; }
     }
 }
