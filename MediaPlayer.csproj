@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D52AD98D-45EB-4D2C-8A6D-46D11EBC222C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MediaPlayer</RootNamespace>
+    <AssemblyName>MediaPlayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Screenshot-2021-05-28-135331.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BLL_QLSong.cs" />
+    <Compile Include="DAL\DAL_QLSong.cs" />
+    <Compile Include="DAL\DBHelper.cs" />
+    <Compile Include="DTO\Author.cs" />
+    <Compile Include="DTO\CBBItem.cs" />
+    <Compile Include="DTO\CompareGAS.cs" />
+    <Compile Include="DTO\CompareSongInfo.cs" />
+    <Compile Include="DTO\Gerne.cs" />
+    <Compile Include="DTO\InternetConnection.cs" />
+    <Compile Include="DTO\Playlist.cs" />
+    <Compile Include="DTO\PlaylistSong.cs" />
+    <Compile Include="DTO\Singer.cs" />
+    <Compile Include="DTO\Song.cs" />
+    <Compile Include="DTO\SongInfo.cs" />
+    <Compile Include="DTO\SongModel.cs" />
+    <Compile Include="DTO\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmAddPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAddPL.Designer.cs">
+      <DependentUpon>frmAddPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCheckDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCheckDel.Designer.cs">
+      <DependentUpon>frmCheckDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmControlLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmControlLogin.Designer.cs">
+      <DependentUpon>frmControlLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCreatePL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCreatePL.Designer.cs">
+      <DependentUpon>frmCreatePL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignUpfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SignUpfrm.Designer.cs">
+      <DependentUpon>SignUpfrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmAddPL.resx">
+      <DependentUpon>frmAddPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCheckDel.resx">
+      <DependentUpon>frmCheckDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmControlLogin.resx">
+      <DependentUpon>frmControlLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCreatePL.resx">
+      <DependentUpon>frmCreatePL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SignUpfrm.resx">
+      <DependentUpon>SignUpfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Screenshot-2021-05-28-135331.ico" />
+    <None Include="Resources\icons8-admin-settings-male-24.png" />
+    <Content Include="Resources\icons8-audio-32.png" />
+    <None Include="Resources\icons8-user-48.png" />
+    <None Include="Resources\Screenshot 2021-05-28 135331.png" />
+    <None Include="Resources\icons8-user-24 %281%29.png" />
+    <None Include="Resources\icons8-user-24.png" />
+    <None Include="Resources\icons8-video-playlist-24 %281%29.png" />
+    <None Include="Resources\icons8-trash-24 %281%29.png" />
+    <None Include="Resources\icons8-trash-16 %281%29.png" />
+    <None Include="Resources\icons8-trash-16.png" />
+    <None Include="Resources\icons8-trash-24.png" />
+    <None Include="Resources\icons8-video-playlist-96.png" />
+    <None Include="Resources\icons8-video-playlist-24.png" />
+    <None Include="Resources\icons8-video-playlist-80.png" />
+    <None Include="Resources\icons8-audio-321.png" />
+    <None Include="Resources\icons8-audio-wave-24.png" />
+    <None Include="Resources\icons8-audio-wave-24 %281%29.png" />
+    <Content Include="Resources\icons8-circled-play-50.png" />
+    <Content Include="Resources\icons8-circled-play-501.png" />
+    <Content Include="Resources\icons8-circled-play-64.png" />
+    <Content Include="Resources\icons8-clock-24 %281%29.png" />
+    <None Include="Resources\icons8-repeat-30 %281%292.png" />
+    <None Include="Resources\icons8-end-30 %281%292.png" />
+    <None Include="Resources\icons8-play-481.png" />
+    <None Include="Resources\icons8-skip-to-start-30 %281%292.png" />
+    <None Include="Resources\icons8-repeat-30 %281%291.png" />
+    <None Include="Resources\icons8-playlist-241.png" />
+    <None Include="Resources\icons8-clock-24 %281%291.png" />
+    <Content Include="Resources\icons8-clock-24.png" />
+    <Content Include="Resources\icons8-clock-30.png" />
+    <Content Include="Resources\icons8-clock-32.png" />
+    <None Include="Resources\icons8-download-241.png" />
+    <Content Include="Resources\icons8-end-30 %281%29.png" />
+    <Content Include="Resources\icons8-end-30 %281%291.png" />
+    <Content Include="Resources\icons8-end-30.png" />
+    <None Include="Resources\icons8-home-24.png" />
+    <None Include="Resources\icons8-home-24 %281%29.png" />
+    <None Include="Resources\icons8-home-24 %282%29.png" />
+    <None Include="Resources\icons8-home-36.png" />
+    <None Include="Resources\icons8-home-24 %282%291.png" />
+    <None Include="Resources\icons8-exit-32.png" />
+    <None Include="Resources\icons8-enter-24.png" />
+    <None Include="Resources\icons8-enter-32.png" />
+    <None Include="Resources\icons8-eye-24.png" />
+    <None Include="Resources\icons8-eye-16.png" />
+    <Content Include="Resources\icons8-itunes-note-32.png" />
+    <None Include="Resources\icons8-lock-24.png" />
+    <None Include="Resources\icons8-left-arrow-24.png" />
+    <None Include="Resources\icons8-left-arrow-50.png" />
+    <None Include="Resources\icons8-left-arrow-32.png" />
+    <Content Include="Resources\icons8-lounge-music-playlist-30.png" />
+    <Content Include="Resources\icons8-lounge-music-playlist-32.png" />
+    <Content Include="Resources\icons8-male-user-24.png" />
+    <Content Include="Resources\icons8-male-user-241.png" />
+    <Content Include="Resources\icons8-male-user-30 %281%29.png" />
+    <None Include="Resources\icons8-male-user-30 %281%291.png" />
+    <Content Include="Resources\icons8-male-user-30.png" />
+    <Content Include="Resources\icons8-male-user-48.png" />
+    <None Include="Resources\icons8-menu-24.png" />
+    <Content Include="Resources\icons8-minus-24.png" />
+    <None Include="Resources\icons8-musical-notes-241.png" />
+    <None Include="Resources\icons8-multiply-241.png" />
+    <None Include="Resources\icons8-rectangular-241.png" />
+    <None Include="Resources\icons8-minus-241.png" />
+    <Content Include="Resources\icons8-multiply-24.png" />
+    <None Include="Resources\icons8-music-32.png" />
+    <None Include="Resources\icons8-music-24.png" />
+    <Content Include="Resources\icons8-musical-notes-24.png" />
+    <None Include="Resources\icons8-no-audio-32.png" />
+    <Content Include="Resources\icons8-pause-50.png" />
+    <None Include="Resources\icons8-pause-501.png" />
+    <None Include="Resources\icons8-pencil-24.png" />
+    <None Include="Resources\icons8-pencil-24 %281%29.png" />
+    <Content Include="Resources\icons8-person-24.png" />
+    <Content Include="Resources\icons8-play-24.png" />
+    <None Include="Resources\icons8-play-241.png" />
+    <Content Include="Resources\icons8-play-30.png" />
+    <Content Include="Resources\icons8-play-35.png" />
+    <Content Include="Resources\icons8-play-45.png" />
+    <Content Include="Resources\icons8-play-48.png" />
+    <None Include="Resources\icons8-playlist-24 %281%29.png" />
+    <Content Include="Resources\icons8-playlist-24.png" />
+    <None Include="Resources\icons8-plus-math-24.png" />
+    <None Include="Resources\icons8-plus-math-241.png" />
+    <None Include="Resources\icons8-plus-math-24 %281%29.png" />
+    <Content Include="Resources\icons8-plus-math-30.png" />
+    <Content Include="Resources\icons8-rectangular-24.png" />
+    <Content Include="Resources\icons8-rectangular-30.png" />
+    <Content Include="Resources\icons8-repeat-30 %281%29.png" />
+    <Content Include="Resources\icons8-repeat-30.png" />
+    <None Include="Resources\icons8-settings-32.png" />
+    <None Include="Resources\icons8-settings-32 %282%29.png" />
+    <None Include="Resources\icons8-settings-32 %281%29.png" />
+    <None Include="Resources\icons8-shuffle-24.png" />
+    <None Include="Resources\icons8-repeat-301.png" />
+    <None Include="Resources\icons8-repeat-one-30.png" />
+    <None Include="Resources\icons8-repeat-3011.png" />
+    <Content Include="Resources\icons8-shuffle-30.png" />
+    <None Include="Resources\icons8-shuffle-301.png" />
+    <None Include="Resources\icons8-shuffle-3011.png" />
+    <Content Include="Resources\icons8-skip-to-start-30 %281%29.png" />
+    <Content Include="Resources\icons8-skip-to-start-30 %281%291.png" />
+    <Content Include="Resources\icons8-skip-to-start-30.png" />
+    <Content Include="Resources\icons8-subtract-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
